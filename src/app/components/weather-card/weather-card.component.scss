@@ -1,0 +1,166 @@
+.weather_card--container {
+    display: grid;
+   
+    
+   
+    margin: 5rem 0rem 0rem 0rem;
+    justify-content: center;
+    align-items: center;
+    
+
+    .weather_card {
+        display: grid;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .weather_card_top {
+            display: grid;
+            border-radius: 5px 5px 0px 0px;
+            grid-template-columns: 1fr 1fr;
+            background-color: rgb(222, 72, 2);
+            
+            padding: 1rem 0.5rem 1rem 0.5rem;
+
+            .section_top--left {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                line-height: 0.1rem;
+
+                .city {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    margin-bottom: 0.7rem;
+                }
+
+                .time {
+                    font-size: 0.7rem;
+                    font-weight: 300;
+                }
+
+                .status {
+                    margin-top: 2rem;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                }
+            }
+
+            .section_top--right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                line-height: 0.1rem;
+
+                .temp {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    margin-bottom: 2.5rem;
+                    letter-spacing: 2px;
+                }
+
+                .temp-min {
+                    font-size: 0.7rem;
+                    font-weight: 500;
+                    margin-bottom: 0.2rem;
+                }
+
+                .temp-max {
+                    font-size: 0.7rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .weather_card_bottom {
+            background-color: #383b47;
+            display: grid;
+            border-radius: 0px 0px 5px 5px;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 1rem;
+
+            .weather_card_bottom--left {
+                .section {
+                    display: flex;
+                    line-height: 0.1rem;
+
+                    .label {
+                        font-weight: 400;
+                        font-size: 0.7rem;
+                        color: white;
+                    }
+                    .value {
+                        font-weight: 200;
+                        font-size: 0.7rem;
+                        color: white;
+                    }
+                }
+            }
+
+            .weather_card_bottom--center {
+                border-right: 1px solid #494d5d;
+                border-left: 1px solid #494d5d;
+                // display: flex;
+                // flex-direction: column;
+                // align-items: center;
+                // justify-content: center;
+                // padding: 0.5rem;
+
+                // .nav_image {
+                //     font-size: 1px;
+                // }
+
+                .section {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .label {
+                        font-weight: 400;
+                        font-size: 0.7rem;
+                        color: white;
+                    }
+                    .value {
+                        font-weight: 200;
+                        font-size: 0.7rem;
+                        color: white;
+                    }
+                }
+            }
+
+            .weather_card_bottom--right {
+                // display: flex;
+                // flex-direction: column;
+                // align-items: center;
+                // justify-content: center;
+                // padding: 0.5rem;
+               
+                justify-content: center;
+                    align-items: center;
+                vertical-align: middle;
+                line-height: 0.1rem;
+
+                .section {
+                    margin-top: 0.6rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .label {
+                        font-weight: 400;
+                        font-size: 0.7rem;
+                        color: white;
+                    }
+                    .value {
+                        font-weight: 200;
+                        font-size: 0.7rem;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

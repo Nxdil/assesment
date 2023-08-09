@@ -1,0 +1,54 @@
+<div class="weather_card--container">
+    <div class="weather_card">
+      <div class="weather_card_top">
+        <div class="section_top--left">
+          <p class="city">{{responseList?.name}},&nbsp;{{responseList?.sys.country}} </p>
+          <p class="time">{{responseList?.dt | unixTimestampToDateAndTime}}</p>
+  
+          <p class="status">{{responseList?.weather[0].description}}</p>
+          
+        </div>
+        <div class="section_top--right">
+          <p class="temp">{{responseList?.main.temp | number: '1.0-0'}}°F</p>
+          <p class="temp-min">Temp Min: {{responseList?.main.temp_min | number: '1.0-0'}}°F</p>
+          <p class="temp-max">Temp Max: {{responseList?.main.temp_max | number: '1.0-0'}}°F</p>
+        </div>
+      </div>
+  
+      <div class="weather_card_bottom">
+        <div class="weather_card_bottom--left">
+          <div class="section">
+            <p class="label">Pressure: &nbsp;</p>
+            <p class="value">{{responseList?.main.pressure}}Pa</p>
+          </div>
+          <div class="section">
+            <p class="label">Humidity: &nbsp;</p>
+            <p class="value">{{responseList?.main.humidity}}%</p>
+          </div>
+          <div class="section">
+            <p class="label">Visibility: &nbsp;</p>
+            <p class="value">{{responseList?.visibility / 1000 | number:'1.1-1'}}Km</p>
+          </div>
+        </div>
+        <div class="weather_card_bottom--center">
+          <div class="section">
+            <p class="label">{{responseList?.wind.speed}}m/s</p>&nbsp;
+            <p class="label">{{responseList?.wind.deg}}&nbsp;Degrees</p>
+            <p class="label"></p>
+          </div>
+        </div>
+        <div class="weather_card_bottom--right">
+          <div class="section">
+            <p class="label">Sunrise:&nbsp;</p>
+            <p class="value">{{responseList?.sys.sunrise | unixTimestampToDate}}</p>
+          </div>
+          <div class="section">
+            <p class="label">Sunset:&nbsp;</p>
+            <p class="value">{{responseList?.sys.sunset | unixTimestampToDate}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+  

@@ -1,0 +1,31 @@
+<form [formGroup]="geoForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="longitude">Longitude:</label>
+      <input type="text" id="longitude" formControlName="longitude" />
+      <div  class="warning" *ngIf="geoForm.get('longitude')?.invalid && geoForm.get('longitude')?.touched">
+        <div  *ngIf="geoForm.get('longitude')?.hasError('required')">Longitude is required.</div>
+        <div *ngIf="geoForm.get('longitude')?.hasError('pattern')">Invalid longitude format.</div>
+      </div>
+    </div>
+    <div>
+      <label for="latitude">Latitude:</label>
+      <input type="text" id="latitude" formControlName="latitude" />
+      <div  class="warning" *ngIf="geoForm.get('latitude')?.invalid && geoForm.get('latitude')?.touched">
+        <div  *ngIf="geoForm.get('latitude')?.hasError('required')">Latitude is required.</div>
+        <div  *ngIf="geoForm.get('latitude')?.hasError('pattern')">Invalid latitude format.</div>
+      </div>
+    </div>
+    <button type="submit" [disabled]="geoForm.invalid">Submit</button>
+</form>
+
+
+<!-- <div class="weather-card">
+    <h2>{{ responseList.sys.country }}</h2> -->
+    <!-- <div class="weather-details">
+      <div class="temperature">{{ temperature }}°C</div>
+      <div class="conditions">{{ conditions }}</div>
+    </div> -->
+  <!-- </div> -->
+  
+
+
